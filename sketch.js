@@ -22,10 +22,10 @@ function preload(){
 
 function setup() {
   createCanvas(800,630);
-  bg = createSprite(50, 300, 7000, 200);
+  bg = createSprite(700, 300, 7000, 200);
   bg.addImage(bgImg);
   bg.scale = 0.4;
-  bg.x = bg.width/2;
+  //bg.x = bg.width/2;
 
   diano = createSprite(100,520,1000,50);
   diano.addAnimation("dianoImg",dianoImg);
@@ -70,11 +70,11 @@ if(bg.x < 0){
 
 function spawnObstacles(){
   if(frameCount % 60 === 0){
-    var obstacle = createSprite(700,570,70,70);
+    var obstacle = createSprite(2000,570,70,70);
     obstacle.addImage(obsImg);
     obstacle.scale = 0.2;
     obstacle.velocityX = -6;
-    obstacle.lifetime = 300;
+    obstacle.lifetime = 500;
     var rand = Math.round(random(1,9));
 
     obstaclesGroup.add(obstacle);
@@ -83,11 +83,11 @@ function spawnObstacles(){
 
 function spawnShrub1(){
   if(frameCount % 80 === 0){
-    var shrub1 = createSprite(700,570,70,70);
+    var shrub1 = createSprite(2000,570,70,70);
     shrub1.addImage(shrub1Img);
     shrub1.scale = 0.05;
     shrub1.velocityX = -6;
-    shrub1.lifetime = 300;
+    shrub1.lifetime = 500;
     var rand = Math.round(random(1,9));
 
     shrub1Group.add(shrub1);
@@ -96,11 +96,11 @@ function spawnShrub1(){
 
 function spawnShrub2(){
   if(frameCount % 100 === 0){
-    var shrub2 = createSprite(700,570,70,70);
+    var shrub2 = createSprite(2000,570,70,70);
     shrub2.addImage(shrub2Img);
     shrub2.scale = 0.05;
     shrub2.velocityX = -6;
-    shrub2.lifetime = 300;
+    shrub2.lifetime = 500;
     var rand = Math.round(random(1,9));
 
     shrub2Group.add(shrub2);
@@ -109,11 +109,11 @@ function spawnShrub2(){
 
 function spawnShrub3(){
   if(frameCount % 300 === 0){
-    var shrub3 = createSprite(500,570,70,70);
+    var shrub3 = createSprite(2000,570,70,70);
     shrub3.addImage(shrub3Img);
     shrub3.scale = 0.05;
     shrub3.velocityX = -6;
-    shrub3.lifetime = 300;
+    shrub3.lifetime = 500;
     var rand = Math.round(random(1,9));
 
     shrub3Group.add(shrub3);
